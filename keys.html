@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="keys.css">
+    
+    <title>Choose Keys</title>
+  </head>
+  <body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <div id="kbd" class="container-fluid">
+        <h1>Field Validator</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <p>I want to:</p>
+                    <form>
+                        <div class="form-group">
+                            <input id="allow" type="radio" name="allow-prevent-key" value="allow-key">
+                            <label for="allow">Allow Selected Key(s)</label>
+                            <br/>
+                            <input id="prevent" type="radio" name="allow-prevent-key" value="prevent-key" checked="true">
+                            <label for="prevent">Prevent Selected Key(s)</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm">
+                    <form>
+                            <div class="form-group">
+                                <!-- <label for="testInputLabel">Test Input</label> -->
+                                <input type="text" class="form-control" id="testInput" placeholder="Try Key validation">
+                                <!-- <small id=testInputHelp class="form-text text-muted">Try out validation</small> -->
+                            </div>
+                        </form>   
+                </div>
+                <div class="col-sm">     
+                    <div id="resetKeyboard" onclick="resetKeyboard()" class="btn btn-danger disabled">Reset Keyboard</div>
+                </div>
+            </div>
+
+        <div class="jumbotron jumbotron-transparent col-md-12">
+            <div id="kFuncRow" class="row k_FuncRow">
+                <div class="key sevenP disabled" data-k="esc">esc</div>
+                <div class="key sevenP" data-k="F1">F1</div>
+                <div class="key sevenP" data-k="F2">F2</div>
+                <div class="key sevenP" data-k="F3">F3</div>
+                <div class="key sevenP" data-k="F4">F4</div>
+                <div class="key sevenP" data-k="F5">F5</div>
+                <div class="key sevenP" data-k="F6">F6</div>
+                <div class="key sevenP" data-k="F7">F7</div>
+                <div class="key sevenP" data-k="F8">F8</div>
+                <div class="key sevenP" data-k="F9">F9</div>
+                <div class="key sevenP" data-k="F10">F10</div>
+                <div class="key sevenP" data-k="F11">F11</div>
+                <div class="key sevenP" data-k="F12">F12</div>
+                <div class="key sevenP disabled"></div>
+            </div>
+            <div id="kNumRow" class="row k_NumRow">
+                <div class="key sixPointEightP" data-k="`" data-shift-k="~">`</div>
+                <div class="key sixPointEightP" data-k="1" data-shift-k="!">1</div>
+                <div class="key sixPointEightP" data-k="2" data-shift-k="@">2</div>
+                <div class="key sixPointEightP" data-k="3" data-shift-k="#">3</div>
+                <div class="key sixPointEightP" data-k="4" data-shift-k="$">4</div>
+                <div class="key sixPointEightP" data-k="5" data-shift-k="%">5</div>
+                <div class="key sixPointEightP" data-k="6" data-shift-k="^">6</div>
+                <div class="key sixPointEightP" data-k="7" data-shift-k="&">7</div>
+                <div class="key sixPointEightP" data-k="8" data-shift-k="*">8</div>
+                <div class="key sixPointEightP" data-k="9" data-shift-k="(">9</div>
+                <div class="key sixPointEightP" data-k="0" data-shift-k=")">0</div>
+                <div class="key sixPointEightP" data-k="-" data-shift-k="_">-</div>
+                <div class="key sixPointEightP" data-k="+" data-shift-k="+">+</div>
+                <div class="key ninePointSevenP">delete</div>
+            </div>
+            <div id="kTabRow" class="row k_TabRow">
+                <div class="key ninePointSevenP">tab</div>
+                <div class="key sixPointEightP" data-k="q" data-shift-k="Q">q</div>
+                <div class="key sixPointEightP" data-k="w" data-shift-k="W">w</div>
+                <div class="key sixPointEightP" data-k="e" data-shift-k="E">e</div>
+                <div class="key sixPointEightP" data-k="r" data-shift-k="R">r</div>
+                <div class="key sixPointEightP" data-k="t" data-shift-k="T">t</div>
+                <div class="key sixPointEightP" data-k="y" data-shift-k="Y">y</div>
+                <div class="key sixPointEightP" data-k="u" data-shift-k="U">u</div>
+                <div class="key sixPointEightP" data-k="i" data-shift-k="I">i</div>
+                <div class="key sixPointEightP" data-k="o" data-shift-k="O">o</div>
+                <div class="key sixPointEightP" data-k="p" data-shift-k="P">p</div>
+                <div class="key sixPointEightP" data-k="[" data-shift-k="{">[</div>
+                <div class="key sixPointEightP" data-k="]" data-shift-k="}">]</div>
+                <div class="key sixPointEightP" data-k="\" data-shift-k="{">\</div>
+            </div>
+            <div id="kAsdfRow" class="row k_AsdfRow">
+                <div class="key elevenP disabled"></div>
+                <div class="key sixPointEightP" data-k="a" data-shift-k="A">a</div>
+                <div class="key sixPointEightP" data-k="s" data-shift-k="S">s</div>
+                <div class="key sixPointEightP" data-k="d" data-shift-k="D">d</div>
+                <div class="key sixPointEightP" data-k="f" data-shift-k="F">f</div>
+                <div class="key sixPointEightP" data-k="g" data-shift-k="G">g</div>
+                <div class="key sixPointEightP" data-k="h" data-shift-k="H">h</div>
+                <div class="key sixPointEightP" data-k="j" data-shift-k="J">j</div>
+                <div class="key sixPointEightP" data-k="k" data-shift-k="K">k</div>
+                <div class="key sixPointEightP" data-k="l" data-shift-k="L">l</div>
+                <div class="key sixPointEightP" data-k=":" data-shift-k=":">;</div>
+                <div class="key sixPointEightP" data-k=";" data-shift-k='"'>"</div>
+                <div class="key elevenP">return</div>
+            </div>
+            <div id="kZxcvRow" class="row">
+                <div class="key fourteenPointEightP" data-k="shift" data-shift-k="shift">shift</div>
+                <div class="key sixPointEightP" data-k="z" data-shift-k="Z">z</div>
+                <div class="key sixPointEightP" data-k="x" data-shift-k="X">x</div>
+                <div class="key sixPointEightP" data-k="c" data-shift-k="C">c</div>
+                <div class="key sixPointEightP" data-k="v" data-shift-k="V">v</div>
+                <div class="key sixPointEightP" data-k="b" data-shift-k="B">b</div>
+                <div class="key sixPointEightP" data-k="n" data-shift-k="N">n</div>
+                <div class="key sixPointEightP" data-k="m" data-shift-k="M">m</div>
+                <div class="key sixPointEightP" data-k="," data-shift-k="<">,</div>
+                <div class="key sixPointEightP" data-k="." data-shift-k=">">.</div>
+                <div class="key sixPointEightP" data-k="/" data-shift-k="?">/</div>
+                <div class="key fourteenPointEightP" data-k="shift" data-shift-k="shift">shift</div>
+            </div>
+            <div id="kSpaceRow" class="row">
+                <div class="key sixPointEightP" data-k="fn">fn</div>
+                <div class="key sixPointEightP" data-k="ctrl">ctrl</div>
+                <div class="key sixPointEightP" data-k="opt">opt</div>
+                <div class="key eightPointFiveP" data-k="cmd">cmd</div>
+                <div class="key fiftyP" data-k=" ">space bar</div>
+                <div class="key eightPointFiveP" data-k="cmd">cmd</div>
+                <div class="key sixPointEightP" data-k="opt">opt</div>
+                <div class="key twentyThreePointFiveP" data-k="arrows">arrows</div>
+            </div>
+            <div class="row">
+                <div id="preview"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="keys.js"></script>

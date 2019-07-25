@@ -1,0 +1,84 @@
+
+:root{
+    --hoverColor: rgb(235, 235, 235);
+    --clickedColor:rgb(255, 241, 225);
+    --selectedColor: rgb(255, 241, 225);
+}
+
+.btn{
+    cursor: pointer;
+}
+
+.disabled{
+    background-color: grey !important;
+    border: 1px solid grey !important;
+    cursor: not-allowed;
+}
+
+.form-group > input, .form-group > label{
+    cursor: pointer;
+}
+.key{
+    border: 1px solid rgb(191, 191, 191);
+    text-align: center;
+    border-radius: 3px;
+    height: 40px;
+    line-height: 16px;
+    padding-top: 6px;
+}
+.lowerSelected{
+    background-color: var(--selectedColor)
+}
+.upperSelected{
+    border: 1px solid orange;
+}
+.key:hover{
+    background-color: var(--hoverColor);
+    cursor: pointer;
+}
+.key:active{
+    background-color: var(--clickedColor)
+}
+.sixPointEightP{
+    width: 6.8%
+}
+.sevenP{
+    width: 7%;
+}
+.eightPointOneP{
+    width: 8.1%;
+}
+.eightPointFiveP{
+    width: 8.5%;
+}
+.ninePointSevenP{
+    width: 9.7%;
+}
+.ninePointNineP{
+    width: 9.9%;
+}
+.tenPointFiveP{
+    width: 10.5%;
+}
+.elevenP{
+    width: 11%;
+}
+.elevenPointFiveP{
+    width: 11.5%;
+}
+.fourteenPointEightP{
+    width: 14.8%;
+}
+.fiftyP{
+    width: 30%;
+}
+.twentyThreePointFiveP{
+    width: 23.5%;
+}
+.jumbotron-transparent{
+    background-color: transparent !important;
+}
+.jumbotron{
+    padding: 1rem;
+}
+
